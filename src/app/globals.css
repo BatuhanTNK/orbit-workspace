@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg-canvas: #fafafb;
+  --bg-sidebar: #f3f4f6;
+  --bg-surface: #ffffff;
+  --bg-elevated: #f4f4f7;
+  --border-subtle: rgba(24, 24, 27, 0.085);
+  --border-strong: rgba(24, 24, 27, 0.16);
+  --text-primary: #09090b;
+  --text-secondary: #52525b;
+  --text-muted: #71717a;
+}
+
+.dark {
+  --bg-canvas: #09090b;
+  --bg-sidebar: #0d0d11;
+  --bg-surface: #131318;
+  --bg-elevated: #1b1b22;
+  --border-subtle: rgba(255, 255, 255, 0.075);
+  --border-strong: rgba(255, 255, 255, 0.15);
+  --text-primary: #f4f4f5;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+}
+
+* {
+  border-color: var(--border-subtle);
+}
+
+html,
+body {
+  height: 100%;
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Crisp subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(113, 113, 122, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(113, 113, 122, 0.45);
+}
+
+/* Keyboard badge styling */
+.kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  padding: 0 0.3rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 0.3rem;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-elevated);
+  color: var(--text-secondary);
+}
+
+/* Subtle Linear-style ambient top glow in dark mode */
+.dark .orbit-ambient-glow {
+  background-image: radial-gradient(
+    ellipse 60% 35% at 50% -10%,
+    rgba(99, 102, 241, 0.09),
+    transparent 70%
+  );
+}
+
+.orbit-ambient-glow {
+  background-image: radial-gradient(
+    ellipse 60% 35% at 50% -10%,
+    rgba(99, 102, 241, 0.045),
+    transparent 70%
+  );
+}
