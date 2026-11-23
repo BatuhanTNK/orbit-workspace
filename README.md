@@ -4,6 +4,9 @@
 
 **A keyboard-first, Linear-inspired project & issue tracker built with Next.js App Router, TypeScript, Tailwind CSS v4, `@dnd-kit`, Recharts, and real-time cross-tab synchronization.**
 
+### [🚀 Live Demo — orbit-workspace-batuhan.netlify.app](https://orbit-workspace-batuhan.netlify.app)
+
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Netlify-00C7B7?style=flat-square&logo=netlify&logoColor=white)](https://orbit-workspace-batuhan.netlify.app)
 [![Next.js](https://img.shields.io/badge/Next.js-16_App_Router-000000?style=flat-square&logo=nextdotjs)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38BDF8?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
@@ -89,13 +92,14 @@ npm run start
 
 ---
 
-## Deploying to Vercel
+## Deploying to Netlify
 
-Because Orbit requires zero external API keys or database provisioning for the instant demo mode, deploying to Vercel takes under 60 seconds:
+Orbit requires zero external API keys or database provisioning for the instant demo mode and includes a ready-to-use `netlify.toml` (Next.js App Router runtime auto-detected by Netlify).
 
-1. Push this repository to GitHub.
-2. Import the repository at [vercel.com/new](https://vercel.com/new).
-3. Click **Deploy** — no environment variables required.
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/BatuhanTNK/orbit-workspace)
+
+- **Production Live URL:** [https://orbit-workspace-batuhan.netlify.app](https://orbit-workspace-batuhan.netlify.app)
+- **Health Endpoint:** [https://orbit-workspace-batuhan.netlify.app/api/health](https://orbit-workspace-batuhan.netlify.app/api/health)
 
 ---
 
